@@ -1,0 +1,214 @@
+.with-height {
+	height: 10px;
+}
+
+.footer {
+	background-color: #373737;
+}
+
+.gold-text {
+	text-align: center;
+	color: #f7cb2d;
+	
+}
+
+.gold-text-bold {
+	text-align: center;
+	color: #f7cb2d;
+	font-weight: bold;
+	
+}
+
+.gold-text-left{
+	text-align: left;
+	color: #f7cb2d;
+}
+
+
+.gold-text-right {
+	text-align: right;
+	color: #f7cb2d;
+	
+}
+
+
+.white-text {
+	color:white;
+	text-align: center;
+	font-family: 'Helvetica Neue';
+}
+
+.white-text-underline {
+	color:white;
+	text-decoration: underline;
+	font-size: 100%;
+	text-align: center;
+	font-family: 'Helvetica Neue';
+}
+
+.img-back {
+	  background-image: url(images/back.jpg); 
+	  background-size: cover;
+	  min-height: 600px;
+	  width: 100%;
+}
+
+.grey-back {
+	background-color: grey;
+	min-height: 400px;
+}
+
+.img-back-treatment {
+	  	background-image: url(images/back-treatment.jpg); 
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	  	min-height: 351px; /* unfortunatelly is the image size. Is needed a bigger one */
+	  	width: 100%;
+
+}
+
+.black-back {
+	background-color: black;
+	height: 150px;
+}
+
+
+.grey-buttons {
+  background-color: #A0A0A0;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 1%;
+  box-shadow: 0 0 15px 0 black;
+  font-size: 100%;
+}
+
+.grey-buttons:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+
+
+.size-kw{
+	font-size: 100%;
+	padding-top: 7px;
+	font-weight: bold;
+}
+
+.selected-kw {
+	font-size: 145%;
+	font-weight: bold;
+	padding-top:0%;
+}
+
+#selected {
+	background-color: grey;
+	cursor: default;
+}
+
+
+.size-kw:hover {
+	cursor: pointer;
+	color: #961651;
+}
+
+.selected-kw:hover {
+	cursor: default;
+} 
+
+@media screen and (max-width: 992px) {
+  .grey-buttons {
+  	font-size: 85%;
+  }
+
+  .selected-kw {
+  	font-size: 140%;
+  	padding-top: 2%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grey-buttons {
+  	font-size: 75%;
+  }
+  .selected-kw {
+  	font-size: 140%;
+  	padding-top: 5%;
+  }
+}
+
+
+@media screen and (max-width: 660px) {
+  .grey-buttons {
+  	font-size: 75%;
+  }
+
+  .gold-text {
+  	font-size: 100%;
+  }
+
+  .gold-text-right{
+  	font-size: 100%;
+  }
+
+  .gold-text-left {
+  	font-size: 100%;
+  }
+
+  .white-text {
+  	font-size: 100%;
+  }
+
+  .selected-kw {
+  	font-size: 130%;
+  	padding-top: 6%;
+  }
+
+  .bold-black-kw{
+  	font-size: 100%;
+  }
+
+  .black-kw {
+  font-size: 100%;	
+  } 
+}
+
+.special-margin {
+	margin-left: 25px;
+}
+
+.img-thumbnail {
+	border-bottom-color: #961651;
+	border-width: 8px;
+	border-right-color: black;
+	border-left-color:black;
+	border-top-color: black;
+	border-radius: 0px;
+	padding: 0px;
+}
+
+
+.map-back {
+	background-color: rgb(243, 240, 232);
+}
+
+.map {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.special-box {
+	background-color: white;
+	box-shadow: 0 0 15px 0 black;
+	text-align: center;
+	margin-top: -23%;
+}
+
+.bold-black-kw {
+	font-weight: bold;
+	color: black;
+}
+
+.black-kw {
+	color: black;
+}
