@@ -2111,4 +2111,71 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     })
   })
 
+  // CONTACT
+  $('.contact #submit').click(function(){ 
+
+    $('input#name').removeClass("input-error");
+    $('input#email').removeClass("input-error");
+    $('input#phone').removeClass("input-error");
+    $('textarea#body').removeClass("input-error");
+    
+    var error = false; 
+    var name = $('input#name').val(); 
+    if(name == "" || name == " ") { 
+      error = true; 
+      $('input#name').addClass("input-error");
+    } 
+
+    var subject = $('input#email').val(); 
+    if(subject == "" || subject == " ") { 
+      error = true; 
+      $('input#email').addClass("input-error");
+    }
+    
+    var msg = $('textarea#body').val(); 
+    if(msg == "" || msg == " ") {
+      error = true;
+      $('textarea#body').addClass("input-error");
+      
+    }
+    
+    var email_compare = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i; 
+    var email = $('.contact input#email').val(); 
+    if (email == "" || email == " ") { 
+      $('.contact input#email').addClass("input-error");
+      error = true;
+    } else if (!email_compare.test(email)) { 
+      $('.contact input#email').addClass("input-error");
+      error = true;
+    }
+
+    if(error == true) {
+      return false;
+    }
+
+    var data_string = $('.contact form').serialize(); 
+    
+    $.ajax({
+      type: "POST",
+      url: $('.contact form').attr('action'),
+      data: data_string,
+      
+      success: function(message) {
+        if(message === 'ok'){
+          $('.msg-success').fadeIn('slow');
+          $('input#name').val('');
+          $('.contact input#email').val('');
+          $('input#subject').val('');
+          $('textarea#message').val('');
+        }
+        else{
+          $('.msg-error').fadeIn('slow');
+        }
+      }
+    });
+
+    return false; 
+  });
+  //Contact
+
 }(jQuery);
