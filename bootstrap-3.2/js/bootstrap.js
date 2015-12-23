@@ -2117,7 +2117,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     $('input#name').removeClass("input-error");
     $('input#email').removeClass("input-error");
     $('input#phone').removeClass("input-error");
-    $('textarea#body').removeClass("input-error");
+    $('textarea#message').removeClass("input-error");
     
     var error = false; 
     var name = $('input#name').val(); 
@@ -2132,10 +2132,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
       $('input#email').addClass("input-error");
     }
     
-    var msg = $('textarea#body').val(); 
+    var msg = $('textarea#message').val(); 
     if(msg == "" || msg == " ") {
       error = true;
-      $('textarea#body').addClass("input-error");
+      $('textarea#message').addClass("input-error");
       
     }
     
